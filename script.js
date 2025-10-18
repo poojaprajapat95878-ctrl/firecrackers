@@ -801,12 +801,7 @@ const shellNames = Object.keys(shellTypes);
 
 function init() {
 	// Remove loading state
-	const loading = document.querySelector('.loading-init');
-if (loading) loading.remove();
-
-const stage = document.querySelector('.stage-container');
-if (stage) stage.classList.remove('remove');
-
+	
 	
 	// Populate dropdowns
 	function setOptionsForSelect(node, options) {
