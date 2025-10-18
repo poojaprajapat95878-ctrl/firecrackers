@@ -1,3 +1,14 @@
+const MyMath = {};
+MyMath.clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+MyMath.pointAngle = (x1, y1, x2, y2) => Math.atan2(y2 - y1, x2 - x1);
+MyMath.pointDist = (x1, y1, x2, y2) => {
+	const a = x1 - x2;
+	const b = y1 - y2;
+	return Math.sqrt(a * a + b * b);
+};
+MyMath.random = (min, max) => Math.random() * (max - min) + min;
+MyMath.randomChoice = (arr) => arr[Math.random() * arr.length | 0];
+
 'use strict';
 console.clear();
 
@@ -2005,3 +2016,4 @@ if (IS_HEADER) {
 		);
 	}, 0);
 }
+
