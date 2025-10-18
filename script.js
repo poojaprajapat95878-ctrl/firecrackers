@@ -2282,10 +2282,11 @@ const soundManager = {
 
 
 // Kick things off.
-
 function setLoadingStatus(status) {
-	document.querySelector('.loading-init__status').textContent = status;
+  const statusNode = document.querySelector('.loading-init__status');
+  if (statusNode) statusNode.textContent = status;
 }
+
 
 // CodePen profile header doesn't need audio, just initialize.
 if (IS_HEADER) {
