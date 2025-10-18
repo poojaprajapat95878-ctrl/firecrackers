@@ -2283,8 +2283,7 @@ const soundManager = {
 
 // Kick things off.
 function setLoadingStatus(status) {
-  const statusNode = document.querySelector('.loading-init__status');
-  if (statusNode) statusNode.textContent = status;
+  document.querySelector('.loading-init__status').textContent = status;
 }
 
 
@@ -2293,7 +2292,7 @@ if (IS_HEADER) {
 	init();
 } else {
 	// Allow status to render, then preload assets and start app.
-	setLoadingStatus('Lighting Fuses');
+	
 	setTimeout(() => {
 		soundManager.preload()
 		.then(
